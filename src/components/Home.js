@@ -1,7 +1,11 @@
+import Sidebar from '../layouts/Sidebar';
+
 const Home = () => {
-    return ( 
-        <div className="activity"><h1>Home</h1></div>
-     );
+    return (
+
+        <div>
+            <Sidebar />
+        </div>);
 }
- 
+
 export default Home;

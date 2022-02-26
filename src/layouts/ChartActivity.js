@@ -1,12 +1,10 @@
-import { useContext, useState } from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'; //Legend, Cell
+import { useContext } from "react";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts'; //Legend, Cell
 import ActivityContext from "../context/activity/activityContext";
 
 const ChartActivity = () => {
 
-    const { data, refetch, picking, putaway, chart } = useContext(ActivityContext);
-
-    const [boton, setBoton] = useState(true);
+    const { chart } = useContext(ActivityContext);
 
     console.log(chart)
 
@@ -33,9 +31,9 @@ const ChartActivity = () => {
                             <XAxis dataKey="Estación" />
                             <YAxis />
                             <Tooltip />
-                            {/* <Legend/> */}
-                            <Bar dataKey="Pick" fill="#8884d8" />
-                            <Bar dataKey="Put" fill="#82ca9d" />
+                            <Legend/>
+                            <Bar dataKey="Pick" fill="#780000" />
+                            <Bar dataKey="Put" fill="#2f3848" />
                         </BarChart>
                     </ResponsiveContainer>
 
