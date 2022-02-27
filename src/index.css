@@ -22,18 +22,12 @@ body {
   font-size: 1.6rem;
   font-family: var(--textFont);
 }
-
-
 h1, h2 {
   font-family: var(--headingFont);
   font-weight: 900;
   margin: 0 0 2rem 0;
   text-align: center;
   color: var(--gris2);
-}
-
-h1 span {
-  font-weight: 400;
 }
 h1 {
   font-size: 2.5rem;
@@ -84,22 +78,18 @@ a {
   h4 {
     font-size: 1.6rem;
   }
-
 }
 
 @media (max-width:900px){
   .title{
     margin-top: 2rem; 
   }
-
   h1 {
     font-size: 2.1rem;
   }
-
   h4 {
     font-size: 1.4rem;
   }
-
 }
 
 @media (max-width:650px){
@@ -113,10 +103,9 @@ a {
   h4 {
     font-size: .9rem;
   }
-
 }
 
-/** ----- BODY -----**/
+/** ----- ACTIVITY -----**/
 
 #grid-container {
   display: grid;
@@ -170,7 +159,7 @@ a {
 }
 
 
-/** ----- CHART -----**/
+/** ----- BAR CHART -----**/
 .chart-container {
   width: 100%;
   height: 100%;
@@ -186,26 +175,36 @@ a {
   padding: 3rem 1rem;
   margin-left: 5%;
 }
-
 @media (max-width:1200px){
   .chart {
     width: 88%;
     height: 30rem;
   }
 }
-
 @media (max-width:900px){
   .chart {
     width: 88%;
     height: 30rem;
   }
 }
-
 @media (max-width:650px){
   .chart {
     width: 88%;
     height: 30rem;
   }
+}
+
+/** DASHBOARD BAR CHART **/
+
+.home-chart-container {
+  width: 100%;
+  height: 100%;
+}
+.home-chart {
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  height: 35rem;
 }
 
 /** ----- TABLE-----**/
@@ -216,19 +215,16 @@ a {
   justify-content: center;
   margin-top: 3rem;
 }
-
 table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 50%;
   text-align: center;
 }
-
 table td, table th {
   border: 1px solid #1a202d;
   padding: 8px;
 }
-
 table tr:nth-child(even){background-color: #ffffff;}
 
 table tr:hover {background-color: #ddd;}
@@ -257,12 +253,8 @@ table th {
 /** ----FOOTER ----**/
 
 .footer{
-  display: flex;
-  justify-content: center;
-  margin-left: 1%;
-  margin-top: 2rem;
+  text-align: center;
 }
-
 .footer p {
   font-family: var(--headingFont);
   font-weight: 900;
@@ -280,42 +272,61 @@ table th {
   height: 600px;
 }
 
-/** HOME **/
+/** DASHBOARD **/
 
 .page-container {
   margin: 2rem;
 }
-
 #page {
   display: grid;
-  width: 100%;
-  height: 600ox;
   grid-gap: 2rem;
-  grid-template-areas: "head main"
-                       "nav  main"
-                       "nav  foot";
-  grid-template-rows: 40% 1fr;
+  grid-template-areas: "section_a section_c"
+                       "section_b  section_c"
+                       "section_b  section_d"
+                       " footer footer";
+  grid-template-rows: 35% 15% 38%;
   grid-template-columns: 35% 1fr;
 }
 
-#page > header {
-  grid-area: head;
+@media (max-width:1400px){
+  #page {
+    grid-gap: 2rem;
+    grid-template-areas: "section_a"
+                         "section_c"
+                         "section_b"
+                         "section_d"
+                         "footer";
+    grid-template-rows: 20% 28% 20% 24% auto;
+    grid-template-columns: 100%;
+  }
+}
+
+#page > #section_a {
+  grid-area: section_a;
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   box-sizing: border-box;
   padding: 1px; 
 }
 
-#page > nav {
-  grid-area: nav;
+#page > #section_b {
+  grid-area: section_b;
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   box-sizing: border-box;
   padding: 1px; 
 }
 
-#page > main {
-  grid-area: main;
+#page > #section_c {
+  grid-area: section_c;
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 1px; 
+}
+
+#page > #section_d {
+  grid-area: section_d;
   box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   box-sizing: border-box;
@@ -323,52 +334,7 @@ table th {
 }
 
 #page > footer {
-  grid-area: foot;
-  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  box-sizing: border-box;
-  padding: 1px; 
-}
-
-/** HOME CHART BARRAS **/
-
-.home-chart-container {
-  width: 100%;
-  height: 100%;
-}
-.home-chart {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 35rem;
-}
-
-@media (max-width:1200px){
-  .home-chart {
-    width: 95%;
-    height: 35rem;
-  }
-}
-
-@media (max-width:900px){
-  #page {
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    grid-gap: 2rem;
-    grid-template-areas: "head"
-                         "main"
-                         "nav"
-                        "foot";
-    grid-template-rows: 40% 1fr 1fr;
-    grid-template-columns: 100%;
-  }
-
-  .home-chart {
-    width: 95%;
-    height: 25rem;
-    padding: 2rem;
-  }
+  grid-area: footer; 
 }
 
 #home-title {

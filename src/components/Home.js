@@ -10,7 +10,7 @@ const Home = () => {
             </aside>
             <div className='page-container'>
                 <section id="page">
-                    <header>
+                    <section id='section_a'>
                         <div>
                             <h1 id='home-title'>Paradas del Sistema</h1>
                             <div className='home-chart-one'>
@@ -19,8 +19,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                    </header>
-                    <nav>
+                    </section>
+                    <section id='section_b'>
                         <div>
                             <h1 id='home-title'>Estadísticas</h1>
                             <div className="home-chart">
@@ -28,8 +28,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                    </nav>
-                    <main>
+                    </section>
+                    <section id='section_c'>
                         <div>
                             <h1 id='home-title'>Actividad por Estaciones</h1>
                             <div className="home-chart">
@@ -38,9 +38,8 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-
-                    </main>
-                    <footer>
+                    </section>
+                    <section id='section_d'>
                         <div>
                             <h1 id='home-title'>Carga de Trabajo</h1>
                             <div className="home-chart">
@@ -48,12 +47,12 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
+                    </section>
+                    <footer className='footer'>
+                        <p>Copyright &copy; 2022 FORUS S.A., todos los derechos reservados.</p>
                     </footer>
                 </section>
             </div>
-            <footer className='footer'>
-                <p>Copyright &copy; 2022 FORUS S.A., todos los derechos reservados.</p>
-            </footer>
         </>
     );
 }
