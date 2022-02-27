@@ -7,7 +7,6 @@ import Activity from './components/Activity';
 import './index.css';
 
 
-
 const queryClient = new QueryClient()
 
 function App() {

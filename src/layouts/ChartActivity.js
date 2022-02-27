@@ -10,15 +10,12 @@ const ChartActivity = () => {
 
 
     return (
-        <>
-            
+        <>   
 
             <div className="chart">
                 <div className="chart-container">
-                    <ResponsiveContainer width='99%' height='99%'>
+                    <ResponsiveContainer width='100%' height='100%'>
                         <BarChart
-                            width={800}
-                            height={400}
                             data={chart}
                             margin={{
                                 top: 5,

@@ -1,5 +1,6 @@
 import { useActivity } from "../../hooks/useActivity";
 import ActivityContext from "./activityContext";
+import { Oval } from "react-loader-spinner";
 
 
 const ActivityProvider = (props) => {
@@ -18,7 +19,14 @@ const ActivityProvider = (props) => {
 
     if (isLoading || isFetching) {
         return <>
-            <h1>Cargando...</h1>
+            
+            <div className="spinner">
+                <Oval
+                    color="#2f3848" height={300} width={300} secondaryColor="#edf2f6"
+                />
+
+            </div>
+
         </>
     }
 
@@ -75,10 +83,6 @@ const ActivityProvider = (props) => {
     const pick_diez = pick.filter(item => item.estacion === 10).map(item => item.completed_quantity).reduce((prev, curr) => prev + curr, 0);
 
     const put_diez = put.filter(item => item.estacion === 10).map(item => item.completed_quantity).reduce((prev, curr) => prev + curr, 0);
-
-    const pick_once = pick.filter(item => item.estacion === 11).map(item => item.completed_quantity).reduce((prev, curr) => prev + curr, 0);
-
-    const put_once = put.filter(item => item.estacion === 11).map(item => item.completed_quantity).reduce((prev, curr) => prev + curr, 0);
 
     const pick_doce = pick.filter(item => item.estacion === 12).map(item => item.completed_quantity).reduce((prev, curr) => prev + curr, 0);
 
@@ -144,7 +148,7 @@ const ActivityProvider = (props) => {
 
     const put_veintisiete = put.filter(item => item.estacion === 27).map(item => item.completed_quantity).reduce((prev, curr) => prev + curr, 0);
 
-    
+
     // Obtener Objeto de Arreglos a partir de los datos obtenidos
 
     const chart = [
@@ -197,11 +201,6 @@ const ActivityProvider = (props) => {
             Estación: '10',
             Pick: pick_diez,
             Put: put_diez,
-        },
-        {
-            Estación: '11',
-            Pick: pick_once,
-            Put: put_once,
         },
         {
             Estación: '12',
