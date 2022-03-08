@@ -11,7 +11,7 @@ export const ChartPerformance = () => {
                     cx="50%"
                     cy="50%"
                     outerRadius={80}
-                    fill="#ca6702"
+                    fill="#780000"
                     dataKey="value"
                     label={({
                         cx,
@@ -35,7 +35,7 @@ export const ChartPerformance = () => {
                             <text
                                 x={x}
                                 y={y}
-                                fill="#2f3848"
+                                fill="#780000"
                                 textAnchor={x > cx ? "start" : "end"}
                                 dominantBaseline="central"
                             >

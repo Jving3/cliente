@@ -12,7 +12,7 @@ const Home = () => {
                 <section id="page">
                     <section id='section_a'>
                         <div>
-                            <h1 id='home-title'>Paradas del Sistema</h1>
+                            <h1 id='home-title'>Interrupciones del Sistema</h1>
                             <div className='home-chart-one'>
                                 <div className='home-chart-container-one'>
                                     <ChartPerformance />
