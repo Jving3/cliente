@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import ActivityProvider from './context/activity/activityState';
-import Home from './components/Home';
+import Dashboard from './components/Dashboard';
 import Activity from './components/Activity';
 import './index.css';
 
@@ -16,7 +16,7 @@ function App() {
       <ActivityProvider>
             <BrowserRouter>
                 <Routes>
-                  <Route path='/' element={<Home/>}/> 
+                  <Route path='/' element={<Dashboard/>}/> 
                   <Route path='/activity' element={<Activity/>}/> 
                 </Routes>
             </BrowserRouter>
