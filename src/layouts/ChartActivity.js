@@ -1,5 +1,16 @@
 import { useContext } from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts'; //Legend, Cell
+import React from 'react';
+import {
+    ResponsiveContainer,
+    ComposedChart,
+    Line,
+    Bar,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    Legend,
+} from 'recharts';
 import ActivityContext from "../context/activity/activityContext";
 
 const ChartActivity = () => {
@@ -12,23 +23,24 @@ const ChartActivity = () => {
     return (
         <>
             <ResponsiveContainer width='100%' height='100%'>
-                <BarChart
+                <ComposedChart
                     data={chart}
                     margin={{
-                        top: 5,
-                        right: 30,
+                        top: 20,
+                        right: 20,
+                        bottom: 20,
                         left: 20,
-                        bottom: 5,
                     }}
                 >
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="Estación" />
+                    <CartesianGrid stroke="#f5f5f5" />
+                    <XAxis dataKey="Estación" scale="band" />
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="Pick" fill="#780000" />
-                    <Bar dataKey="Put" fill="#2f3848" />
-                </BarChart>
+                    <Bar dataKey="Pick" barSize={20} fill="#780000" />
+                    <Bar dataKey="Put" barSize={20} fill="#2f3848" />
+                    <Line type="monotone" dataKey="Bines" stroke="#008000" />
+                </ComposedChart>
             </ResponsiveContainer>
         </>
     );

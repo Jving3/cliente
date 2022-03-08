@@ -156,131 +156,157 @@ const ActivityProvider = (props) => {
             Estación: '1',
             Pick: pick_uno,
             Put: put_uno,
+            Bines: "900"
         },
         {
             Estación: '2',
             Pick: pick_dos,
             Put: put_dos,
+            Bines: "900"
         },
         {
             Estación: '3',
             Pick: pick_tres,
             Put: put_tres,
+            Bines: "800"
         },
         {
             Estación: '4',
             Pick: pick_cuatro,
             Put: put_cuatro,
+            Bines: "1000"
         },
         {
             Estación: '5',
             Pick: pick_cinco,
             Put: put_cinco,
+            Bines: "1100"
         },
         {
             Estación: '6',
             Pick: pick_seis,
             Put: put_seis,
+            Bines: "1000"
         },
         {
             Estación: '7',
             Pick: pick_siete,
             Put: put_siete,
+            Bines: "1200"
         },
         {
             Estación: '8',
             Pick: pick_ocho,
             Put: put_ocho,
+            Bines: "0"
         },
         {
             Estación: '9',
             Pick: pick_nueve,
             Put: put_nueve,
+            Bines: "0"
         },
         {
             Estación: '10',
             Pick: pick_diez,
             Put: put_diez,
+            Bines: "0"
         },
         {
             Estación: '12',
             Pick: pick_doce,
             Put: put_doce,
+            Bines: "0"
         },
         {
             Estación: '13',
             Pick: pick_trece,
             Put: put_trece,
+            Bines: "0"
         },
         {
             Estación: '14',
             Pick: pick_catorce,
             Put: put_catorce,
+            Bines: "0"
         },
         {
             Estación: '15',
             Pick: pick_quince,
             Put: put_quince,
+            Bines: "0"
         },
         {
             Estación: '16',
             Pick: pick_dieciseis,
             Put: put_dieciseis,
+            Bines: "0"
         },
         {
             Estación: '17',
             Pick: pick_diecisiete,
             Put: put_diecisiete,
+            Bines: "0"
         },
         {
             Estación: '18',
             Pick: pick_dieciocho,
             Put: put_dieciocho,
+            Bines: "0"
         },
         {
             Estación: '19',
             Pick: pick_diecinueve,
             Put: put_diecinueve,
+            Bines: "0"
         },
         {
             Estación: '20',
             Pick: pick_veinte,
             Put: put_veinte,
+            Bines: "0"
         },
         {
             Estación: '21',
             Pick: pick_veintiuno,
             Put: put_veintiuno,
+            Bines: "500"
         },
         {
             Estación: '22',
             Pick: pick_veintidos,
             Put: put_veintidos,
+            Bines: "0"
         },
         {
             Estación: '23',
             Pick: pick_veintitres,
             Put: put_veintitres,
+            Bines: "0"
         },
         {
             Estación: '24',
             Pick: pick_veinticuatro,
             Put: put_veinticuatro,
+            Bines: "0"
         },
         {
             Estación: '25',
             Pick: pick_veinticinco,
             Put: put_veinticinco,
+            Bines: "0"
         },
         {
             Estación: '26',
             Pick: pick_veintiseis,
             Put: put_veintiseis,
+            Bines: "0"
         },
         {
             Estación: '27',
             Pick: pick_veintisiete,
             Put: put_veintisiete,
+            Bines: "0"
         },
     ];
 
